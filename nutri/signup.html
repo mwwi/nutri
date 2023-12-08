@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Sign Up Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    <h1>Registration</h1>
+                </div>
+                <div class="panel-body">
+                    <form action="signup.php" method="post" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Register">
+                    </form>
+                </div>
+                <div class="panel-footer text-right">
+                    <small>&copy; Jessie's Group</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="error-message" class="alert alert-danger" style="display: none;">
+        All fields are required. Please fill out all the fields.
+    </div>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (firstName === "" || lastName === "" || username === "" || password === "") {
+                // Display the error message if any field is empty
+                document.getElementById('error-message').style.display = 'block';
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission if all fields are filled
+        }
+    </script>
+</body>
+</html>

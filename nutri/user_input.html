@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Information</title>
+    <link rel="stylesheet" type="text/css" href="css/user_input.css">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="user-info-container">
+    <div class="container">
+        <h1>User Information</h1>
+        <form id="user-info-form">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" name="age" min="0" required>
+
+            <label for="height-feet">Height (feet):</label>
+            <input type="number" id="height-feet" name="height-feet" min="0" required>
+
+            <label for="height-inches">Height (inches):</label>
+            <input type="number" id="height-inches" name="height-inches" min="0" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" min="0" step="0.01" required>
+
+            <button type="button" id="next-button">Next</button>
+        </form>
+    </div>
+</div>
+
+    <div class="calculation-container">
+        <div class="container">
+            <h1>Desirable Body Weight Calculation</h1>
+        <form id="calculate-weight-form">
+            <label for="choose-formula">Choose a formula:</label>
+            <select id="choose-formula" name="choose-formula">
+                <option value="hamwi">Hamwi</option>
+                <option value="bmi">BMI</option>
+                <option value="tanhauser">Tanhauser</option>
+            </select>
+            <br>
+
+            <button type="submit" id="calculate-dbw-button">Calculate DBW</button>
+        </form>
+        <div id="result"></div> 
+        <div id="calculation-steps"></div>
+        <br>
+        <button class="button" id="proceed-button">Proceed to Total Energy Requirement</button>
+        </div>
+    </div>
+
+        <div class="container-pal">
+            <h1>Total Energy Requirement Calculation</h1>
+        <form id="calculate-energy-form">
+            <label for="choose-formula">Choose a formula:</label>
+            <select id="choose-formula" name="choose-formula">
+                <option value="pal-body-weight">PAL & Body Weight</option>
+                <option value="harris-formula">Harris Formula</option>
+                <option value="mifflin-formula">Mifflin Formula</option>
+                <option value="oxford-formula">Oxford Formula</option>
+            </select>
+
+            <br>
+            <!-- Add "Choose Work Intensity" dropdown initially hidden -->
+<label for="choose-intensity" id="choose-intensity-label" >Choose Work Intensity:</label>
+<select id="choose-intensity" name="choose-intensity" >
+    <option value="sedentary">Sedentary</option>
+    <option value="light">Light</option>
+    <option value="moderate">Moderate</option>
+    <option value="very Active">Very Active</option>
+</select>
+            <br>
+            
+            <button type="submit">Calculate TER</button>
+        </form>
+
+        </div>
+
+<!--    <script src="user_input.js"></script> -->
+
+</body>
+</html>
